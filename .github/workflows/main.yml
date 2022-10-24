@@ -42,11 +42,6 @@ jobs:
       with:
          node-version: '14'
 
-    # Runs a single command using the runners shell
-    - name: npm install and npm run build
-      run: |
-        npm install
-        npm run build-prod
     - name: Build image
       run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
